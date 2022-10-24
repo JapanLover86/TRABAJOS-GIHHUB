@@ -1,0 +1,1053 @@
+public class ejercicio1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    //EMPLEANDO ARREGLOS MOSTRAR N PRODUCTOS CON SUS RESPECTIVOS PRECIOS
+    public static void main(String[] args) {
+        // TODO code application logic here
+        String utiles []={"pelota", "zapatilla","mochila","polo"};
+        double precios[]={35.5,89.60,45.99,25.70};
+        System.out.println("Lista de Productos y sus precios");
+           for (int u=0;u<utiles.length;u++){
+        System.out.println(utiles[u]+ " "+ precios[u]);
+}
+}
+}
+
+public class ejercicio10 {
+
+    /**
+     * @param args the command line arguments
+     */
+    //- Ingresar por teclado n cantidad de números y ordenarlos en forma
+    //ascendente
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner dato = new Scanner(System.in);
+        System.out.println("Ingreseantidad de numeros ");
+        int elementos = dato.nextInt();
+        int[] n = new int[elementos];
+        System.out.println("Ingresenúmeros a ordenar ");
+        for(int a = 0; a < n.length; a++) {
+        n[a] = dato.nextInt();
+        }
+        int orden = 0; for(int b = 1; b < n.length; b++) {
+         for(int c = 0; c < n.length - b; c++) {
+        if(n[c] > n[c+1]) {
+        orden = n[c]; n[c] = n[c+1]; n[c+1] = orden;
+        } }
+        }
+        for(int i = 0; i <n.length; i++) {
+        System.out.print(n[i] + " ");
+}
+}
+}
+
+
+public class ejercicio2 {
+
+    /**
+     * @param args the command line arguments
+     */
+    //En un arreglo, mostrar los datos de un usuario (nombre, edad y sexo).
+    public static void main(String[] args) {
+        // TODO code application logic here
+        String nombres []={"Victor", "Ronald","Carolina","Paola"};
+        int edad []={25,30,19,22};
+        char sexo []={'M','M','M','F'};
+        System.out.println("Datos de los usuarios"); 
+        System.out.println("NOMBRES EDAD SEXO");
+        System.out.println("------- ---- ----");
+        for (int u=0;u<nombres.length;u++){
+        System.out.println(nombres[u]+ " "+ edad[u] + " " + sexo[u]);
+}
+}
+}
+
+public class ejercicio3 {
+
+    /**
+     * @param args the command line arguments
+     */
+    //Mostrar el promedio de notas de tres cursos
+    public static void main(String[] args) {
+        // TODO code application logic here
+        String cursos []={"Diseño", "Estadistica","Ingles"};
+        int practicas []={14,17,11};
+        System.out.println("Promedio de Cursos");
+        System.out.println("CURSO NOTA");
+        System.out.println("------ ----- ");
+        int pp=(practicas[0]+practicas[1]+practicas[2])/3;
+        for (int s=0;s<cursos.length;s++){
+        System.out.println(cursos[s] + " "+practicas[s]); } 
+        System.out.println("Su Promedio es : " +pp);
+ }
+}
+
+public class ejercicio4 {
+
+    /**
+     * @param args the command line arguments
+     */
+    //- Ingresar por teclado 10 números en un arreglo y mostrar el numero mayor y el numero menor.
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner dato = new Scanner(System.in);
+        int mayor = 0; int menor = 0;
+        int[] numeros = new int[11];
+        for (int i = 0+1; i < 11; i++) {
+        System.out.print("Ingrese el número " + (i) + " a evaluar :"); numeros[i] =
+        dato.nextInt();
+        }
+        for (int i = 1; i < numeros.length; i++) {
+        if (mayor < numeros[i]) {
+        mayor = numeros[i];
+        } } menor = mayor;
+        for (int i = 1; i < numeros.length; i++) {
+        if (menor > numeros[i]) {
+        menor = numeros[i];
+        }
+        }
+        System.out.println(" el numero mayor es " + mayor + " el numero menor es :" +
+        menor); 
+    } 
+}
+
+
+public class ejercicio5 {
+
+    /**
+     * @param args the command line arguments
+     */
+    //Crear un arreglo, que nos pida ingresar una palabra, para mostrarlo letra por letra y la suma de sus caracteres.
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner dato=new Scanner(System.in);
+        int c=0; System.out.println("Escriba una palabra");
+        String palabra=dato.nextLine();
+         char caracteres[]=new char[palabra.length()];
+        for(int i=0;i<palabra.length();i++){
+        c=c+1;
+        caracteres[i]=palabra.charAt(i); System.out.println(caracteres[i]);
+        }
+        System.out.println("la cantidad de caracteres es : "+c);
+}
+}
+
+public class ejercicio6 {
+
+    /**
+     * @param args the command line arguments
+     */
+    //Ingresar 10 números enteros y mostrar los números pares
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner dato=new Scanner(System.in);
+        int par[]=new int[10];
+        int valor[]=new int[10];
+        int contador=0;
+        int i;
+        System.out.println("Ingrese los 10 números a evaluar");
+        for( i=0;i<10;i++){
+        par[i]=dato.nextInt();
+        if(par[i]%2==0) {
+        valor[contador]=par[i];
+        contador++;
+        }
+        }
+        System.out.println("los numeros pares son : " );
+        for( i=0;i<contador;i++) {
+         System.out.println(valor[i]);
+}
+}
+}
+
+
+
+public class ejercicio7 {
+
+    /**
+     * @param args the command line arguments
+     */
+    //Ingresar por teclado 5 notas y mostrar el promedio.
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner dato=new Scanner(System.in);
+        float notas[]=new float[6]; int con=1;
+        float promedio,sum=0;
+        while(con<6) {
+        System.out.println("Ingrese la " + con + "° nota : "); notas[con]=dato.nextFloat();
+        sum=sum+notas[con]; con++;
+        }
+        promedio=sum/5;
+        System.out.println("Su promedio es : " + promedio);
+}
+}
+
+public class ejercicio8 {
+
+    /**
+     * @param args the command line arguments
+     */
+    //Un cliente realiza la siguiente compra de artefactos, plancha,
+//licuadora, lavadora y cocina, si la compra supera los 1200, recibe un descuento
+//de 17 %, mostrar el precio de cada artefacto, así como el monto, el descuento y
+//el pago total si le corresponde un descuento
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner sc = new Scanner(System.in);
+ 
+    System.out.println("Cantidad de productos :");
+    int cantidad = sc.nextInt();
+    
+    System.out.println("PRODUCTOS: LAVADORA, LICUADORA, COCINA,PLANCHA ");
+    int productos = sc.nextInt();
+ 
+    System.out.print("Precio (producto): ");
+    int precioUnitario=sc.nextInt();
+ 
+    int importe = cantidad * precioUnitario; //importe SIN descuento
+ 
+    System.out.println("\nCantidad de productos: " + cantidad);
+    System.out.println("Precio unitario: " + precioUnitario);
+    System.out.println("Importe base: " + importe);
+ 
+    //Ahora veremos si se aplica algún descuento
+    if (cantidad >= 0 && cantidad <= 1200) {
+        System.out.println("\nDescuento aplicable: 0%");
+        System.out.println("Importe con descuento: " + (importe * 1));
+    }
+    else if (cantidad >= 1200 && cantidad <= 0) {
+        System.out.println("\nDescuento aplicable: 17%");
+        System.out.println("Importe con descuento: " + (importe * 0.17));
+    }
+    
+ 
+    sc.close(); //Cierre objeto Scanner
+}}
+
+
+public class ejercicio9 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner dato = new Scanner(System.in);
+        int c=0; int a; float m =0;
+        System.out.println("Ingresarantidad de atletas");
+        c = dato.nextInt(); String atleta[] = new String[c];
+        float tiempo[] = new float[c];
+        for( a=0;a<c;a++){
+        System.out.println("Ingrese nombre del atleta");
+        atleta[a] = dato.next();
+        System.out.println("Ingrese tiempo del recorrido");
+        tiempo[a] = dato.nextFloat();
+        }
+        for (int i = 1; i < tiempo.length; i++) {
+        if (m > tiempo[i]) { m = tiempo[i];
+        }else{
+        m = tiempo[i];
+        System.out.println("Eldor es el atleta con el tiempo "+m); }
+}
+} }
+
+
+public class ejercicio1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    //Crea un método que obtenga la suma de los números naturales desde 1 hasta N. Se debe pasar como parámetro el número N
+    public static void main(String[] args) {
+        // TODO code application logic here
+        //llamada para obtener la suma de 5
+    System.out.println(sum(4));
+}
+//método que devuelve la suma de los elementos desde n hasta 1
+//ejemplo: n = 4 -> 4+3+2+1=10
+static int sum(int n)
+{
+    //caso base
+    if(n==1)
+        return 1;
+
+    //llamada recursiva
+    else
+        return n+sum(n-1);
+}
+}
+public class ejercicio10 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        //tamaño del triángulo
+    int n = 5;
+    //tipo de triángulo: 1-creciente 2-decreciente
+    int tipo = 1;
+    if(tipo==1) tri_tipo1(n);
+    else if (tipo==2) tri_tipo2(n);
+}
+//crea los elementos de cada fila
+static void trian(int n)
+{
+    if(n>0)
+    {
+        System.out.print("* ");
+        trian(n-1);
+    }
+    else
+        System.out.println();
+}
+//triángulo rectángulo creciente
+static void tri_tipo1(int n)
+{
+    if(n>0)
+    {
+        tri_tipo1(n-1);
+        trian(n);
+    }
+}
+//triángulo rectángulo decreciente
+static void tri_tipo2(int n)
+{
+    if(n>0)
+    {
+        trian(n);
+        tri_tipo2(n-1);
+    }
+}
+}
+
+public class ejercicio11 {
+
+    /**
+     * @param args the command line arguments
+     */
+    //Crea un método que compruebe si una palabra está ordenada alfabéticamente
+    public static void main(String[] args) {
+        // TODO code application logic here
+        //palabra analizada
+    String palabra="abcdef";
+    if(orden(palabra)) System.out.println("La palabra está ordenada alfabéticamente");
+    else System.out.println("La palabra NO está ordenada alfabéticamente");
+}
+//método que comprueba si una palabra está ordenada alfabéticamente
+//ejemplo: abcdef -> true
+public static boolean orden(String cad)
+{
+    cad=cad.toLowerCase();
+    if(cad.length()>1)
+    {
+        if(cad.charAt(0)<=cad.charAt(1))
+        return orden(cad.substring(1, cad.length()));
+        else return false;
+    }
+    else return true;
+}
+}
+
+
+public class ejercicio12 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        //palabra analizada
+    String s="reconocer";
+    if(palin(s)) System.out.println("Es un palíndromo");
+    else System.out.println("No es un palíndromo");
+}
+//método que comprueba si una palabra es un palíndromo
+//ejemplo: reconocer -> true
+public static boolean palin(String frase)
+{
+    frase=frase.toLowerCase();
+    if(frase.length()<=1) return true;
+    else
+    {
+        if(frase.charAt(0)==frase.charAt(frase.length()-1))
+        return palin(frase.substring(1, frase.length()-1));
+        else return false;
+    }
+}
+}
+
+
+public class ejercicio13 {
+
+    /**
+     * @param args the command line arguments
+     */
+    //Crea un método que obtenga el número binario de un número N pasado como parámetro binario
+    public static void main(String[] args) {
+        // TODO code application logic here
+        //número a convertir
+        int N = 10;
+        binario(N);
+        System.out.println();
+        System.out.println(binario2(N));
+    }
+//solución1: método que imprime por pantalla n en binario
+
+    public static void binario(int n) {
+        if (n < 2) {
+            System.out.print(n);
+        } else {
+            binario(n / 2);
+            System.out.print(n % 2);
+        }
+    }
+//solución2: método que devuelve el binario de n
+
+    public static int binario2(int n) {
+        if (n < 2) {
+            return n;
+        } else {
+            return n % 2 + 10 * binario2(n / 2);
+        }
+    }
+}
+
+public class ejercicio14 {
+
+    /**
+     * @param args the command line arguments
+     */
+    //Crea un método que compruebe si un número es binario. Un número binario está formado únicamente por ceros y unos
+    public static void main(String[] args) {
+        // TODO code application logic here
+        //valor del número analizado
+    int num = 1001010;
+    if(enBinario(num)) System.out.println("El número está en binario");
+    else System.out.println("El número no está en binario");
+}
+//método que comprueba si n está en binario
+//ejemplo: n = 101011 -> true
+static boolean enBinario(int n)
+{
+    if(n>9)
+    {
+        if(n%10==0 || n%10==1) return enBinario(n/10);
+        else return false;
+    }
+    else if(n==0 || n==1) return true;
+    else return false;
+}
+}
+
+public class ejercicio15 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic h
+        //valor del número analizado
+    int num = 1234;
+
+    //creciente
+    if (ordenado_cre(num))
+        System.out.println("Está ordenado de forma creciente");
+    else
+        System.out.println("NO está ordenado de forma creciente");
+
+    //decreciente
+    if (ordenado_decre(num))
+        System.out.println("Está ordenado de forma decreciente");
+    else
+        System.out.println("NO está ordenado de forma decreciente");
+}
+//obtiene base elevado a exp
+static int poten(int base, int exp)
+{
+    if(exp==0) return 1;
+    else return base * poten(base,exp-1);
+}
+//obtiene la cantidad de dígitos de num
+static int digitos(int num)
+{
+    if(num==0) return 0;
+    return 1 + digitos(num/10);
+}
+//comprueba si un num está ordenado de forma creciente
+//ejemplo: num = 1234 -> true
+static boolean ordenado_cre(int num)
+{
+    if(num<10) return true;
+    else
+    {
+        int num_izq = num / poten(10, digitos(num)-1);
+        num = num - num_izq*poten(10, digitos(num)-1);
+        int num_der = num / poten(10, digitos(num)-1);
+        if(num_izq<=num_der) return ordenado_cre(num);
+        else return false;
+    }
+}
+//comprueba si un num está ordenado de forma decreciente
+//ejemplo: num = 4321 -> true
+static boolean ordenado_decre(int num)
+{
+    if(num<10) return true;
+    else
+    {
+        int num_izq = num / poten(10, digitos(num)-1);
+        num = num - num_izq*poten(10, digitos(num)-1);
+        int num_der = num / poten(10, digitos(num)-1);
+        if(num_izq>=num_der) return ordenado_decre(num);
+        else return false;
+    }
+}
+}
+
+
+public class ejercicio16 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        //valor del número analizado
+    int num = 1221;
+    if (simetric(num))
+            System.out.println("Es simétrico");
+        else
+            System.out.println("NO es simétrico");
+}
+//método que devuelve la cantidad de dígitos de num
+static int digitos(int num)
+{
+    if(num==0) return 0;
+    return 1 + digitos(num/10);
+}
+//método que devuelve base elevado a exp
+static int poten(int base, int exp)
+{
+    if(exp==1) return base;
+    else return base * poten(base,exp-1);
+}
+//método que comprueba si num es un número es simétrico
+//ejemplo: num = 12321 -> true
+static boolean simetric(int num)
+{
+    if(digitos(num)<=1)
+        return true;
+    else
+    {
+        int desp = poten(10,digitos(num)-1);
+        if(num/desp != num % 10)
+            return false;
+        else
+            return simetric((num-(num/desp)*desp)/10);
+    }
+}
+}
+
+public class ejercicio2 {
+
+    /**
+     * @param args the command line arguments
+     */
+    //Crea un método que imprima los dígitos desde 1 hasta N. Se debe pasar como parámetro el número N
+    public static void main(String[] args) {
+        // TODO code application logic here
+        //declaración de variables
+        int n1, n2;
+        Scanner sc = new Scanner(System.in);
+
+        //leer el primer número
+        System.out.println("Introduce un número entero: ");
+        n1 = sc.nextInt();      //lee un entero por teclado
+
+        //leer el segundo número
+        System.out.println("Introduce otro número entero: ");
+        n2 = sc.nextInt();      //lee un entero por teclado
+        
+        //mostrar resultado
+        System.out.println("Ha introducido los números: " + n1 + " y " + n2);                      
+
+    }
+}
+
+
+public class ejercicio3 {
+
+    /**
+     * @param args the command line arguments
+     */
+    //Crea un método que imprima los dígitos desde N hasta 1. Se debe pasar como parámetro el número N
+    public static void main(String[] args) {
+        // TODO code application logic here
+        int n = 5;
+    decre(n);
+}
+//método que imprime dígitos de n hasta 1
+//ejemplo: n=5 -> 54321
+//ejemplo: n=8 -> 87654321
+static void decre(int n)
+{
+    if(n>0)
+    {
+        System.out.print(n);
+        decre(n-1);
+    }
+    else
+    System.out.println();
+}
+}
+
+
+public class ejercicio4 {
+
+    /**
+     * @param args the command line arguments
+     */
+    //Crea un método que obtenga la cantidad de dígitos de un número N. Se debe pasar como parámetro el número N
+    public static void main(String[] args) {
+        // TODO code application logic here
+        int n = 1111;
+    System.out.println(n+" tiene "+digi(n)+" dígitos");
+}
+//método que devuelve la cantidad de dígitos de num, num debe ser positivo
+//ejemplo: num = 1111 -> 4
+//ejemplo: num = 45895 -> 5
+static int digi(int num)
+{
+    if(num<=0) return 0;
+    return 1 + digi(num/10);
+}
+}
+
+public class ejercicio5 {
+
+    /**
+     * @param args the command line arguments
+     */
+    //Crea un método que obtenga el factorial de un número N. Se debe pasar como parámetro el número N
+    public static void main(String[] args) {
+        // TODO code application logic here
+        //obtier factorial de n
+    int n = 4;
+    System.out.println(n+"! = "+fact(n));
+}
+//método que devuelve el factorial de n
+//ejemplo: n = 4 -> 4x3x2x1
+static int fact(int n)
+{
+    if(n>1) return n * fact(n-1);
+    else return 1;
+}
+}
+
+
+public class ejercicio6 {
+
+    /**
+     * @param args the command line arguments
+     */
+    //Crea un método que calcule el número de fibonacci a partir de un número pasado como parámetro
+    public static void main(String[] args) {
+        // TODO code application logic here
+        //numero de fibonacci
+    int num = 5;
+
+    System.out.println("Fibonacci de "+num+" es "+fibonacci1(num));
+    System.out.println("Fibonacci de "+num+" es "+fibonacci2(num));
+    System.out.println("Fibonacci de "+num+" es "+fibonacci3(num));
+}
+//solución 1
+static int fibonacci1(int n)
+{
+    if (n>1)  return fibonacci1(n-1) + fibonacci1(n-2);  //función recursiva
+    else if (n==1)
+        return 1;
+    else
+        return 0;
+}
+//solución 2
+static int fibonacci2(int n)
+{
+    if (n>1)
+    return fibonacci2(n-1) + fibonacci2(n-2);  //función recursiva
+    else return n;
+}
+//solución 3
+static int fibonacci3(int n)
+{
+    if (n<2)
+    return n;
+    else return fibonacci3(n-1) + fibonacci3(n-2);  //función recursiva
+}
+}
+
+
+
+public class ejercicio7 {
+
+    /**
+     * @param args the command line arguments
+     */
+    //Crear un método que obtenga el resultado de elevar un número a otro. Ambos números se deben pasar como parámetros
+    public static void main(String[] args) {
+        // TODO code application logic here
+        int base=2;
+    int exp=0;
+    System.out.println(base+" elevado a "+exp+" = "+poten(base, exp));
+}
+//método que devuelve base elevado a exp
+//ejemplo: base = 2 y exp = 4 -> 4
+static int poten(int base, int exp)
+{
+    if(exp==0) return 1; // cualquier número elevado a cero es 1
+    else if(exp==1) return base;
+    else return base * poten(base,exp-1);
+}
+}
+
+
+
+public class ejercicio8 {
+
+    /**
+     * @param args the command line arguments
+     */
+    //Crea un método que dado un número, lo imprima invertido por pantalla
+    public static void main(String[] args) {
+        // TODO code application logic here
+        //numero a invertir
+    int n = 1234;
+    inv(n);
+}
+//método que dado un número, lo imprime por pantalla invertido
+//ejemplo: n = 1234 -> 4321
+static void inv(int n)
+{
+    if(n<10) System.out.print(n);
+    else
+    {
+        System.out.print(n%10);
+        inv(n/10);
+    }
+}
+}
+
+
+
+public class ejercicio9 {
+
+    /**
+     * @param args the command line arguments
+     */
+    //Crea un método que imprima por pantalla un Rectángulo a partir de los valores de la base y la altura
+    public static void main(String[] args) {
+        // TODO code application logic here
+        //imprimir rectángulo: altura, base
+    cuad(5,10);
+}
+//método que imprime un rectángulo
+//ejemplo: base = 4 y altura 3
+//
+// * * * *
+// * * * *
+// * * * *
+//
+static void cuad(int altura, int base)
+{
+    if(altura>0)
+    {
+        cuad2(base);//método recursivo que crea los elementos de cada línea
+        cuad(altura-1, base);//llamada recursiva
+    }
+}
+//crea los elementos de cada línea
+static void cuad2(int n)
+{
+    if(n>0)
+    {
+        System.out.print("* ");
+        cuad2(n-1);
+    }
+    else
+        System.out.println();
+}
+}
+
+package com.mycompany.matriz10x10re;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Andertaker
+ */
+public class Matriz10x10re {
+
+    public static void main(String[] args) {
+        int [][] matriz = new int [10][10];
+        int suma = 0, num;
+        Scanner sc = new Scanner(System.in);
+        for (int i=0;i<10;i++){
+            for(int j=0;j<10;j++){
+                System.out.println("Ingrese un numero: "+i+""+j+"");
+                
+                matriz[i][j]=(int) (Math.random()*100);
+                System.out.println(" "+matriz[i][j]);
+            }
+        }
+        
+        
+        num = 9;
+        for(int j=0;j<10;j++){
+            suma = suma + matriz[j][num];
+            num--;
+            
+        }
+        System.out.println("La suma de la diagonal secundaria es: "+suma);
+        
+        
+    }
+}
+
+
+
+package matriz10x10;
+
+import java.util.Scanner;
+
+
+
+/**
+ *
+ * @author Andertaker
+ */
+public class Matriz10x10SUMADIAGONALES {
+    public static void main(String args[]){
+        int matriz[][] = new int [10][10];
+        int suma1=0,suma2=0;
+        System.out.print("Ingrese el tamaño de la matriz nxn: ");
+        Scanner num = new Scanner (System.in);
+        int n = num.nextInt();
+        System.out.println("Matriz "+n+"x"+n+": ");
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                System.out.print("Ingrese el numero de la fila "+(i+1)+", columna "+(j+1)+": ");
+                int numerov = num.nextInt();
+                matriz[i][j] = numerov;
+            }
+        }
+        System.out.println("\n");
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++)
+                System.out.print(matriz[i][j]+" ");
+            suma1+=matriz[i][i];
+            suma2+=matriz[n-i-1][i];
+            System.out.print("\n");
+        }
+        System.out.println("La suma de la diagonal Principal es: "+suma1);
+        System.out.println("La suma de la diagonal secundaria es: "+suma2);
+        System.out.println("La suma de las diagonales es: "+(suma1+suma2));
+    }
+    
+}
+
+package contador.positivos.y.negativos;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Andertaker
+ */
+public class ContadorPositivosYNegativos {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner sc = new Scanner(System.in);
+        int[] numeros = new int[10];
+        int pos = 0, neg = 0; //contador para positivos y negativos
+        int i;
+        double sumaPos =0, sumaNeg = 0; //suma de positivos y negativos
+        
+        //leemos los valores por teclado y los guardados en el array
+        System.out.println("Lectura de los elementos del array");
+        
+        for(i=0; i<numeros.length;i++){
+            System.out.print("numeros["+i+"]= ");
+            numeros[i]=sc.nextInt();
+            
+        }
+        
+        //se reconoce el array para sumar positivos y negativos
+        for(i=0;i<numeros.length;i++){
+            if (numeros[i]>0){ //sumar positivos
+                sumaPos += numeros[i];
+                pos++;
+            } else if (numeros[i]<0){ //sumar negativos
+                sumaNeg += numeros[i];
+                neg++;
+                                
+                
+            }
+        }
+        
+        //mostrar resultados
+        if (pos !=0){
+            System.out.println("Media de los valores positivos: "+sumaPos/pos);
+        } else {
+            System.out.println("No ha introducido numeros positivos");
+        }
+        if (neg !=0){
+            System.out.println("Media de los valores negativos: "+sumaNeg/neg);
+            
+        } else {
+            System.out.println("No ha introducido numeros positivos");
+        }
+        
+    }
+    
+}
+
+
+
+package arrays.semana.pkg3;
+import java.util.Scanner;
+
+/**
+ *
+ * @author mbt99
+ */
+//NUMEROS POSTI Y NEGATIVOS ARANA FRANZ
+public class Mavenproject3 {
+
+    public static void main(String[] args) {
+ 
+        Scanner sc = new Scanner(System.in);
+        int[] numeros = new int[10];
+        int pos = 0, neg = 0, cero = 0; //contadores
+        int i;
+       
+        //Leemos los valores por teclado y los guardamos en el array                                              
+        System.out.println("Lectura de los elementos del array: ");
+        for (i = 0; i < numeros.length; i++) {
+            System.out.print("numeros[" + i + "]= ");
+            numeros[i] = sc.nextInt();
+        }
+  
+        //se recorre el array para contar positivos, negativos y ceros
+        for (i = 0; i < numeros.length; i++) {
+            if (numeros[i] > 0) {
+                pos++;
+            } else if (numeros[i] < 0) {
+                neg++;
+            } else {
+                cero++;
+            }
+        }
+  
+        //mostrar resultados
+        System.out.println("Positivos: " + pos);                                                                  
+        System.out.println("Negativos: " + neg);
+        System.out.println("Ceros: " + cero);
+    }
+ 
+}
+
+
+package arrays7x7;
+
+import java.util.Arrays;
+
+/**
+ *
+ * @author Andertaker
+ */
+public class Arrays7x7 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        int[][]matriz = new int[7][7];
+
+        int f;
+
+        for (f=0 ; f < matriz.length ; f++){
+        matriz[f][f]=1;
+        }
+        for (f=0 ; f < matriz.length ; f++){
+        System.out.println(Arrays.toString (matriz [f]));
+        }
+        }
+        }
+
+
+package arrays.pkg3x3;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Andertaker
+ */
+public class ARRAYS3X3 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        int[][]num= new int[3][3];
+        Scanner numero = new Scanner(System.in);
+        System.out.println("Ingrese numeros: ");
+        for(int i=0; i<num.length;i++){ //dimension uno
+            for(int j=0;j<num.length;j++){ //dimension dos
+                num[i][j]=numero.nextInt();
+                
+            }
+        }
+        
+        System.out.println("Imprimiendo tabla: ");
+        for(int i=0;i<num.length;i++) {
+            System.out.println();
+            for(int j=0; j<num.length;j++){
+                System.out.print(num[i][j]+"");
+            }
+        }
+        System.out.println("\nSuma fila: ");
+        int suma=0;
+        for (int i=0;i<num.length;i++){
+            for(int j=0;j<num.length;j++){
+                suma+=num[i][j];
+                
+            }
+            System.out.println("Fila "+i+"="+suma);
+            suma=0;
+            
+        }
+        System.out.println("suma Columna");
+        for (int i=0;i<num.length;i++){
+            for(int j=0;j<num.length;j++){
+                suma+=num[i][j];
+                
+            }
+            System.out.println("Columna"+i+"="+suma);
+            suma=0;
+            
+        }
+    }
+    
+}
+
+
